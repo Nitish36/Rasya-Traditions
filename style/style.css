@@ -1,0 +1,95 @@
+/* BASIC RESET + UTILS */
+* {
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #222;
+}
+
+/* NAVIGATION */
+.navbar {
+  background: #fff;
+  border-bottom: 2px solid #efefef;
+  position: sticky;
+  top: 0; z-index: 100;
+}
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+.navbar nav a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: #333;
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000;
+}
+
+/* HERO */
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('hero-bg.jpg') center/cover no-repeat;
+  color: #fff;
+  padding: 3rem 0;
+  text-align: center;
+}
+.hero .btn {
+  background: #ff6f61;
+  color: #fff; padding: 0.75rem 1.5rem;
+  border: none; cursor: pointer;
+}
+
+/* SECTIONS */
+.section {
+  padding: 3rem 0;
+}
+.colored {
+  background: #fafafa;
+}
+.container {
+  width: 90%; max-width: 1200px; margin: auto;
+}
+.cards {
+  display: flex; gap: 1.5rem;
+  justify-content: space-between;
+}
+.card {
+  flex: 1; background: #fff;
+  padding: 1.5rem; border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* GALLERY */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+.gallery-grid img {
+  width: 100%; border-radius: 8px;
+}
+
+/* FORM */
+form input, form textarea {
+  width: 100%; padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc; border-radius: 4px;
+}
+.btn {
+  background: #ff6f61; color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none; cursor: pointer;
+}
+
+/* FOOTER */
+.footer {
+  text-align: center; padding: 1rem;
+  background: #222; color: #fff;
+}
