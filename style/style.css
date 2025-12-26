@@ -4,7 +4,7 @@
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 10;
+  /*font-weight: 10;*/
   font-style: normal;
   
 }
@@ -31,20 +31,23 @@ body {
 .navbar nav a {
   margin-left: 1.5rem;
   text-decoration: none;
-  color: #ffffff;
+  color: #d4af37;
+  font-weight: 400;
 }
 .logo {
   font-size: 1.5rem;
+  font-weight: 300;
   text-decoration: none;
-  color: #ffffff;
+  color: #d4af37;
 }
 
 /* HERO */
 .hero {
   background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('hero-bg.jpg') center/cover no-repeat;
-  color: #fff;
+  color: #d4af37;
   padding: 3rem 0;
   text-align: center;
+  font-weight: 400;
 }
 .hero .btn {
   background: #ff6f61;
@@ -57,9 +60,6 @@ body {
 /* SECTIONS */
 .section {
   padding: 3rem 0;
-}
-.colored {
-  /*background: #fafafa;*/
 }
 .container {
   width: 90%; max-width: 1200px; margin: auto;
