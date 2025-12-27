@@ -69,11 +69,20 @@ body {
   justify-content: space-between;
 }
 .card {
-  flex: 1; background: #5e0b2e;
-  padding: 1.5rem; border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  color: #cfa925;
+  flex: 1; 
+  background-color: #470008;
+  border: 1px solid #e2d6cc;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  color: #d4af37;
 }
+
+.card:hover {
+  transform: translateY(-3px);
+  transition: 0.2s ease;
+}
+
 
 /* GALLERY */
 .gallery-grid {
