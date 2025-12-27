@@ -19,7 +19,7 @@ body {
 .navbar {
   /*background: #fff;
   border-bottom: 2px solid #efefef;*/
-  position: sticky;
+  /*position: sticky;*/
   top: 0; z-index: 100;
 }
 .navbar .container {
@@ -69,9 +69,10 @@ body {
   justify-content: space-between;
 }
 .card {
-  flex: 1; background: #000000;
+  flex: 1; background: #5e0b2e;
   padding: 1.5rem; border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  color: #cfa925;
 }
 
 /* GALLERY */
