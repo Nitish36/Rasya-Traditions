@@ -145,6 +145,7 @@ body {
 .cards {
   display: flex; gap: 1.5rem;
   justify-content: space-between;
+  flex-wrap: wrap; 
 }
 .card {
   flex: 1; 
@@ -161,6 +162,13 @@ body {
   transform: translateY(-3px);
   transition: 0.2s ease;
 }
+
+@media (max-width: 768px) {
+  .card {
+    flex: 1 1 calc(50% - 1.5rem);
+  }
+}
+
 
 
 /* GALLERY */
