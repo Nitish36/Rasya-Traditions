@@ -17,10 +17,8 @@ body {
 
 /* NAVIGATION */
 .navbar {
-  /*background: #fff;
-  border-bottom: 2px solid #efefef;*/
-  /*position: sticky;*/
   top: 0; z-index: 100;
+  
 }
 .navbar .container {
   display: flex;
@@ -34,6 +32,58 @@ body {
   color: #d4af37;
   font-weight: 400;
 }
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: #3a2e2a;
+  margin: 4px 0;
+  border-radius: 2px;
+}
+@media (max-width: 768px) {
+
+  .hamburger {
+    display: flex;
+    cursor: pointer;
+    z-index: 200;
+  }
+
+  .navbar nav {
+    position: absolute;
+    top: 60px;              /* just below navbar */
+    right: 1rem;            /* beside hamburger */
+    background-color: #3a2e2a;
+    width: 200px;           /* NOT full width */
+    flex-direction: column;
+    align-items: flex-start;
+    display: none;
+    padding: 0.75rem 0;
+    border-radius: 8px;
+    border: 1px solid #e2d6cc;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    
+  }
+
+  .navbar nav a {
+    margin: 0;
+    padding: 0.75rem 1.25rem;
+    font-size: 1rem;
+    width: 100%;
+  }
+
+  .navbar nav.active {
+    display: flex;
+  }
+}
+
+
+
 .logo {
   display: flex;
   align-items: center;
@@ -41,9 +91,16 @@ body {
   text-decoration: none;
 }
 .logo img {
-  height: 32px;   /* small, elegant */
+  height: 42px;
   width: auto;
 }
+
+@media (max-width: 768px) {
+  .logo img {
+    height: 36px;
+  }
+}
+
 .logo span{
   font-size: 1.5rem;
   font-weight: 300;
@@ -53,7 +110,7 @@ body {
 
 /* HERO */
 .hero {
-  background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('hero-bg.jpg') center/cover no-repeat;
+  /*background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('hero-bg.jpg') center/cover no-repeat;*/
   color: #d4af37;
   padding: 3rem 0;
   text-align: center;
@@ -123,7 +180,7 @@ form input, form textarea {
   border: 1px solid #ccc; border-radius: 4px;
 }
 .btn {
-  background: #ff6f61; color: #fff;
+  background: #960213; color: #fff;
   padding: 0.75rem 1.5rem;
   border: none; cursor: pointer;
 }
@@ -132,4 +189,5 @@ form input, form textarea {
 .footer {
   text-align: center; padding: 1rem;
   background: #222; color: #fff;
+  border-radius: 5%;
 }
