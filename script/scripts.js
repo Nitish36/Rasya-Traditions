@@ -35,3 +35,20 @@ faqItems.forEach(item => {
     }
   });
 });
+
+
+// Video hover play logic
+const videoCards = document.querySelectorAll('.video-card');
+
+videoCards.forEach(card => {
+  const video = card.querySelector('video');
+
+  card.addEventListener('mouseenter', () => {
+    video.play();
+  });
+
+  card.addEventListener('mouseleave', () => {
+    video.pause();
+    video.currentTime = 0; // Reset video to start
+  });
+});

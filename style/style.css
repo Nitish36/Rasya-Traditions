@@ -404,3 +404,67 @@ form input, form textarea {
   transform: rotate(45deg); /* Turns + into x, or use 180deg if using an arrow */
   color: #fff;
 }
+
+/* VIDEO GRID STYLING */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.video-card {
+  position: relative;
+  background: #000;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #d4af37;
+  /* This ensures vertical videos look like Reels/Phones */
+  aspect-ratio: 9 / 16; 
+  cursor: pointer;
+}
+
+.video-card.video-rect {
+  aspect-ratio: 16 / 9; /* Horizontal ratio */
+  grid-column: span 2;   /* Makes it wider to fit the shape */
+}
+
+.video-card video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This fills the box without stretching */
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.video-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(71, 0, 8, 0.9));
+  padding: 20px;
+  text-align: center;
+}
+
+.video-overlay span {
+  color: #d4af37;
+  font-weight: 600;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+
+/* Interaction: Hover to Play effect */
+.video-card:hover video {
+  opacity: 1;
+}
+
+.video-card:hover .video-overlay {
+  background: linear-gradient(transparent, rgba(150, 2, 19, 0.9));
+}
+
+@media (max-width: 768px) {
+  .video-card.video-rect {
+    grid-column: span 1;
+    aspect-ratio: 16 / 9; /* Keep it rectangular but fit in one column */
+  }
+}
