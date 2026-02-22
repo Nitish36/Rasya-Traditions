@@ -468,3 +468,93 @@ form input, form textarea {
     aspect-ratio: 16 / 9; /* Keep it rectangular but fit in one column */
   }
 }
+
+/* FOUNDER SECTION STYLING */
+.founder-flex {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  background: rgba(71, 0, 8, 0.4);
+  padding: 40px;
+  border-radius: 20px;
+  border: 1px dashed rgba(214, 175, 55, 0.5);
+}
+
+.founder-image {
+  flex: 1;
+  position: relative;
+  min-width: 300px;
+}
+
+.founder-image img {
+  width: 100%;
+  border-radius: 15px;
+  border: 3px solid #d4af37;
+  box-shadow: 20px 20px 0px -5px rgba(212, 175, 55, 0.2);
+}
+
+.founder-experience-badge {
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+  background: #960213;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  border: 2px solid #d4af37;
+}
+
+.founder-content {
+  flex: 1.5;
+}
+
+.sub-heading {
+  color: #d4af37;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.founder-content h2 {
+  margin: 10px 0 20px;
+  font-size: 2.5rem;
+}
+
+.founder-content p {
+  margin-bottom: 15px;
+  line-height: 1.8;
+  color: #f4f4f4;
+}
+
+.founder-signature {
+  margin-top: 30px;
+}
+
+.founder-signature h3 {
+  font-family: 'Montserrat', sans-serif; /* If you have a cursive font, use it here! */
+  color: #d4af37;
+  font-size: 1.8rem;
+  margin-top: 5px;
+}
+
+/* Responsive Fix */
+@media (max-width: 900px) {
+  .founder-flex {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .founder-image {
+    width: 80%;
+    margin-bottom: 30px;
+  }
+  
+  .founder-experience-badge {
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
