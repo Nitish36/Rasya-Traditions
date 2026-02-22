@@ -558,3 +558,76 @@ form input, form textarea {
     transform: translateX(50%);
   }
 }
+
+/* PROCESS SECTION STYLING */
+.process-steps {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  position: relative;
+}
+
+.step {
+  flex: 1;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.step-number {
+  width: 40px;
+  height: 40px;
+  background-color: #d4af37;
+  color: #470008;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin: 0 auto 15px;
+  border: 2px solid #fff;
+}
+
+.step-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+
+.step h3 {
+  color: #d4af37;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.step p {
+  font-size: 0.9rem;
+  color: #f4f4f4;
+  line-height: 1.5;
+}
+
+/* Connecting lines between steps on Desktop */
+.step-line {
+  flex: 0.5;
+  height: 2px;
+  background: dashed #d4af37;
+  border-top: 2px dashed rgba(212, 175, 55, 0.4);
+  margin-top: 20px;
+}
+
+/* Responsive adjustment for Mobile */
+@media (max-width: 768px) {
+  .process-steps {
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .step-line {
+    display: none; /* Hide lines on mobile */
+  }
+
+  .step {
+    width: 100%;
+  }
+}
