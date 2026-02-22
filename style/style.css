@@ -346,3 +346,61 @@ form input, form textarea {
     font-size: 0.9rem;
   }
 }
+
+/* FAQ SECTION STYLING */
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background-color: rgba(71, 0, 8, 0.7); /* Dark Maroon */
+  border: 1px solid #d4af37; /* Gold Border */
+  border-radius: 8px;
+  margin-bottom: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.faq-question {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 600;
+  color: #d4af37;
+  user-select: none;
+}
+
+.faq-icon {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.faq-answer {
+  max-height: 0; /* Hidden by default */
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, padding 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #f4f4f4;
+}
+
+.faq-answer p {
+  padding: 0 20px 20px 20px;
+  line-height: 1.6;
+}
+
+/* Active State Styles */
+.faq-item.active {
+  border-color: #fff;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 200px; /* Adjust based on answer length */
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(45deg); /* Turns + into x, or use 180deg if using an arrow */
+  color: #fff;
+}
