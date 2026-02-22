@@ -287,3 +287,62 @@ form input, form textarea {
     grid-template-columns: 1fr;
   }
 }
+
+/* PRICE TAG ON CARDS */
+.price-tag {
+  background-color: #d4af37;
+  color: #470008;
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+/* PRICING TABLE */
+.pricing-table-container {
+  margin-top: 50px;
+  overflow-x: auto; /* For mobile view */
+}
+
+.pricing-table {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background-color: rgba(71, 0, 8, 0.5);
+  border: 1px solid #d4af37;
+  border-radius: 10px;
+  overflow: hidden; /* For border radius to show */
+}
+
+.pricing-table th, .pricing-table td {
+  padding: 15px 20px;
+  text-align: left;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.pricing-table th {
+  background-color: #d4af37;
+  color: #470008;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.pricing-table tr:hover {
+  background-color: rgba(212, 175, 55, 0.1);
+}
+
+.pricing-table td:last-child {
+  font-weight: bold;
+  color: #d4af37;
+}
+
+@media (max-width: 600px) {
+  .pricing-table th, .pricing-table td {
+    padding: 12px 15px;
+    font-size: 0.9rem;
+  }
+}
