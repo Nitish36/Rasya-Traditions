@@ -11,7 +11,7 @@
 body {
   line-height: 1.6;
   color: #ffffff;
-  background: url("../images/background.png") no-repeat center center;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("../images/background.png") no-repeat center center;
   background-size: cover;
 }
 
@@ -174,17 +174,21 @@ body {
 /* GALLERY */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
 }
 .gallery-grid img {
-  width: 50%; border-radius: 8px;
-}
-.gallery-grid  .box img{
-  width: 80%; border-radius: 8px;
+  width: 100%; /* Fill the grid cell */
+  height: 300px; /* Fixed height for uniformity */
+  object-fit: cover; /* Keeps image aspect ratio clean */
+  border-radius: 12px;
+  border: 2px solid #d4af37;
+  transition: 0.3s;
 }
 .gallery-grid img:hover {
-  border: 2px solid white;
+  transform: scale(1.02);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
 }
 /* FORM */
 form input, form textarea {
@@ -204,3 +208,21 @@ form input, form textarea {
   background: #222; color: #fff;
   border-radius: 5%;
 }
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+.whatsapp-float img { width: 25px; }
+.whatsapp-float:hover { transform: scale(1.05); transition: 0.3s; }
