@@ -116,6 +116,12 @@ body {
   text-align: center;
   font-weight: 400;
 }
+.hero h1 {
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
 .hero .btn {
   background: #960213;
   color: #fff; padding: 0.75rem 1.5rem;
@@ -305,6 +311,7 @@ form input, form textarea {
 .pricing-table-container {
   margin-top: 50px;
   overflow-x: auto; /* For mobile view */
+  -webkit-overflow-scrolling: touch;
 }
 
 .pricing-table {
@@ -316,6 +323,7 @@ form input, form textarea {
   border: 1px solid #d4af37;
   border-radius: 10px;
   overflow: hidden; /* For border radius to show */
+  min-width: 500px;
 }
 
 .pricing-table th, .pricing-table td {
@@ -536,10 +544,12 @@ form input, form textarea {
 }
 
 .founder-signature h3 {
-  font-family: 'Montserrat', sans-serif; /* If you have a cursive font, use it here! */
+  font-family: 'Georgia', serif;
+  font-style: italic;
   color: #d4af37;
-  font-size: 1.8rem;
-  margin-top: 5px;
+  letter-spacing: 1px;
+  border-bottom: 1px solid #d4af37;
+  display: inline-block;
 }
 
 /* Responsive Fix */
