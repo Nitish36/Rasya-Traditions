@@ -643,3 +643,77 @@ form input, form textarea {
     width: 100%;
   }
 }
+
+
+/* SAREE CARE TIPS STYLING */
+.tips-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.tip-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.tip-card:hover {
+  background: rgba(212, 175, 55, 0.1);
+  border-color: #d4af37;
+  transform: translateY(-5px);
+}
+
+.tip-icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.tip-card h4 {
+  color: #d4af37;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.tip-card p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #e2d6cc;
+}
+
+/* Bottom Highlight Banner */
+.pro-tip-banner {
+  background: linear-gradient(90deg, #470008, #960213);
+  border: 2px solid #d4af37;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.pro-tip-banner p {
+  color: #fff;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.pro-tip-banner strong {
+  color: #d4af37;
+}
+
+@media (max-width: 600px) {
+  .tip-card {
+    padding: 20px;
+  }
+}
