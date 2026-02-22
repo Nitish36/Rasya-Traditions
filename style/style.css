@@ -441,7 +441,9 @@ form input, form textarea {
   bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(transparent, rgba(71, 0, 8, 0.9));
+  background: rgba(71, 0, 8, 0.7);
+  backdrop-filter: blur(5px); 
+  border-top: 1px solid rgba(212, 175, 55, 0.3);
   padding: 20px;
   text-align: center;
 }
