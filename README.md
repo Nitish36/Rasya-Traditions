@@ -36,7 +36,7 @@ The website serves as:
 
 Rasya Traditions is designed to evolve beyond a service landing page into a scalable brand platform.
 
-1) 1️⃣ Online Booking & Slot Scheduling
+### 1️⃣ Online Booking & Slot Scheduling
 
 Goal: Automate drop-off and pick-up scheduling.
 Potential integration:
@@ -49,7 +49,7 @@ b) Manage daily capacity
 c) Reduce WhatsApp coordination
 d) Improve professionalism
 
-2) 2️⃣ Rasya Care – E-Commerce Shop
+### 2️⃣ Rasya Care – E-Commerce Shop
 
 Move from service-only to product + service.
 Planned Products:
@@ -67,7 +67,8 @@ Additional revenue stream
 1) Brand merchandising
 2) Sales beyond local geography
 
-3) 3️⃣ Subscription Model (Recurring Revenue)
+
+### 3️⃣ Subscription Model (Recurring Revenue)
 
 Example Plan:
 “Professional’s Monthly Plan”
@@ -79,7 +80,7 @@ Benefits:
 2) Ideal for working professionals
 3) Reduces dependency on wedding seasons
 
-4) 4️⃣ Interactive Saree Stylist Quiz
+### 4️⃣ Interactive Saree Stylist Quiz
 
 3-step experience:
 a) Event type
@@ -98,7 +99,7 @@ Business Impact:
 2) Social media shareability
 3) Positions Rasya as styling authority
 
-5) 5️⃣ Video Masterclasses (Digital Product)
+### 5️⃣ Video Masterclasses (Digital Product)
 
 Future vision:
 “Learn to Drape Like a Pro” online course.
@@ -108,7 +109,7 @@ Impact:
 2) Passive income opportunity
 3) Brand authority building
 
-6) 6️⃣ Before & After Interactive Slider
+### 6️⃣ Before & After Interactive Slider
 
 Drag-based transformation comparison.
 
@@ -117,7 +118,7 @@ a) Visual proof of expertise
 b) Strong trust-building element
 c) Premium brand perception
 
-7️⃣ Google Reviews Integration
+### 7️⃣ Google Reviews Integration
 
 Planned integration with:
 Google Business Profile
@@ -128,7 +129,7 @@ Impact:
 2) Increased credibility
 3) SEO benefits
 
-8️⃣ Multi-Language Support
+### 8️⃣ Multi-Language Support
 
 Planned language toggle:
 a) Kannada
