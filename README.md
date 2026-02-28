@@ -44,23 +44,23 @@ Potential integration:
 2) Custom JavaScript calendar
 
 Benefits:
-a) Prevent scheduling overlaps
-b) Manage daily capacity
-c) Reduce WhatsApp coordination
-d) Improve professionalism
+1) Prevent scheduling overlaps
+2) Manage daily capacity
+3) Reduce WhatsApp coordination
+4) Improve professionalism
 
 ### 2️⃣ Rasya Care – E-Commerce Shop
 
 Move from service-only to product + service.
 Planned Products:
-a) Signature saree storage bags
-b) Silk-safe premium safety pins
-c) Pre-pleating accessories
+1) Signature saree storage bags
+2) Silk-safe premium safety pins
+3) Pre-pleating accessories
 
 
 Future payment integrations:
-a) Razorpay
-b) Stripe
+1) Razorpay
+2) Stripe
 
 Business Impact:
 Additional revenue stream
@@ -83,9 +83,9 @@ Benefits:
 ### 4️⃣ Interactive Saree Stylist Quiz
 
 3-step experience:
-a) Event type
-b) Body type
-c) Fabric type
+1) Event type
+2) Body type
+3) Fabric type
 
 Output:
 
@@ -114,9 +114,9 @@ Impact:
 Drag-based transformation comparison.
 
 Impact:
-a) Visual proof of expertise
-b) Strong trust-building element
-c) Premium brand perception
+1) Visual proof of expertise
+2) Strong trust-building element
+3) Premium brand perception
 
 ### 7️⃣ Google Reviews Integration
 
@@ -132,10 +132,10 @@ Impact:
 ### 8️⃣ Multi-Language Support
 
 Planned language toggle:
-a) Kannada
-b) Telugu
-c) Tamil
-d) Hindi
+1) Kannada
+2) Telugu
+3) Tamil
+4) Hindi
 
 Impact:
 1) Wider regional accessibility
