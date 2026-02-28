@@ -52,3 +52,13 @@ videoCards.forEach(card => {
     video.currentTime = 0; // Reset video to start
   });
 });
+
+// Preloader Logic
+window.addEventListener('load', () => {
+  const loader = document.getElementById('preloader');
+  
+  // Add a slight delay for a smoother feel
+  setTimeout(() => {
+    loader.classList.add('fade-out');
+  }, 1000); 
+});
