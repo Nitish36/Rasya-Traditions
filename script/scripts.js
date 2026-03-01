@@ -84,6 +84,7 @@ actualInput.addEventListener('change', function() {
 });
 
 // Add to Calendar Logic
+// Add to Calendar Logic with Auto-Guest
 const addCalBtn = document.querySelector('.add-cal-btn');
 
 addCalBtn.addEventListener('click', () => {
@@ -94,14 +95,25 @@ addCalBtn.addEventListener('click', () => {
     return;
   }
 
-  // Format date for Google Calendar (YYYYMMDD)
+  // 1. Format the date for Google (YYYYMMDD)
+  const dateObj = new Date(selectedDate);
   const formattedDate = selectedDate.replace(/-/g, '');
   
-  const title = encodeURIComponent("Saree Service - Rasya Traditions");
-  const details = encodeURIComponent("Professional saree ironing/pleating appointment.");
+  // 2. Set the end date (Google needs an end date, usually +1 day for all-day events)
+  const tomorrow = new Date(dateObj);
+  tomorrow.setDate(tomorrow.getDate() + 1);
+  const formattedEndDate = tomorrow.toISOString().split('T')[0].replace(/-/g, '');
+
+  // 3. Define the Details
+  const title = encodeURIComponent("Saree Service Appointment - Rasya Traditions");
+  const details = encodeURIComponent("Thank you for booking with Rasya Traditions! This is a reminder for your saree service appointment.");
+  const location = encodeURIComponent("Rasya Traditions Studio");
   
-  // Create Google Calendar Link
-  const gCalUrl = `https://www.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${formattedDate}/${formattedDate}&details=${details}&sf=true&output=xml`;
+  // 4. ADD YOUR FRIEND'S EMAIL HERE
+  const guestEmail = "thanujakedila@gmail.com"; // <-- CHANGE THIS TO HER EMAIL
+
+  // 5. Create the Google Calendar Link with 'add' parameter
+  const gCalUrl = `https://www.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${formattedDate}/${formattedEndDate}&details=${details}&location=${location}&add=${guestEmail}&sf=true&output=xml`;
   
   window.open(gCalUrl, '_blank');
 });
