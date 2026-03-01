@@ -454,6 +454,59 @@
   </div>
 </section>
 
+<!-- Booking Section -->
+<section id="booking" class="section colored">
+  <div class="container">
+    <h2 style="text-align: center; margin-bottom: 40px;">Book Your Slot</h2>
+    
+    <div class="booking-ticket">
+      <!-- Left Part: Date Display -->
+      <div class="ticket-date">
+        <input type="date" id="appointment-date" class="date-input">
+        <div class="date-display">
+          <span id="display-day">--</span>
+          <span id="display-month">SELECT</span>
+          <span id="display-year">DATE</span>
+        </div>
+      </div>
+
+      <!-- Middle Part: Service Details -->
+      <div class="ticket-body">
+        <div class="perforation"></div>
+        <div class="ticket-info">
+          <h3>Saree Service Appointment</h3>
+          <div class="info-row">
+            <span>Location:</span>
+            <strong>Studio / Home Pickup</strong>
+          </div>
+          <div class="info-row">
+            <span>Duration:</span>
+            <strong>24 - 48 Hours</strong>
+          </div>
+          <!-- Stylized Barcode for the 'Ticket' look -->
+          <div class="barcode">|| ||| || |||| || ||| || ||||</div>
+        </div>
+      </div>
+
+      <!-- Right Part: Pricing & Action -->
+      <div class="ticket-price">
+        <div class="price-content">
+          <h4>Service Price</h4>
+          <p class="main-price">Starts ₹199</p>
+          <p class="sub-text">Final quote via WhatsApp</p>
+          
+          <button onclick="bookAppointment()" class="book-btn">Book Slot</button>
+          
+          <!-- The "Add to Calendar" button from your 2nd image -->
+          <button class="add-cal-btn">
+            <span class="cal-icon">📅</span> Add to calendar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
   <!-- Contact Section -->
   <section id="contact" class="section colored">
     <div class="container">

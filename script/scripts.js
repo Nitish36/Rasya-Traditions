@@ -53,6 +53,75 @@ videoCards.forEach(card => {
   });
 });
 
+// Update Ticket Display when Date is selected
+// Force the date picker to open when clicking the ticket area
+const dateContainer = document.querySelector('.ticket-date');
+const actualInput = document.getElementById('appointment-date');
+
+dateContainer.addEventListener('click', () => {
+  try {
+    // showPicker() is the modern way to trigger the calendar
+    actualInput.showPicker();
+  } catch (error) {
+    // Fallback for older browsers
+    actualInput.focus();
+    actualInput.click();
+  }
+});
+
+// Update Ticket Display when Date is selected (Keep your existing code below this)
+actualInput.addEventListener('change', function() {
+  if (this.value) {
+    const date = new Date(this.value);
+    const day = date.getDate();
+    const month = date.toLocaleString('default', { month: 'short' }).toUpperCase();
+    const year = date.getFullYear();
+
+    document.getElementById('display-day').innerText = day < 10 ? '0' + day : day;
+    document.getElementById('display-month').innerText = month;
+    document.getElementById('display-year').innerText = year;
+  }
+});
+
+// Add to Calendar Logic
+const addCalBtn = document.querySelector('.add-cal-btn');
+
+addCalBtn.addEventListener('click', () => {
+  const selectedDate = document.getElementById('appointment-date').value;
+  
+  if (!selectedDate) {
+    alert("Please select a date on the ticket first!");
+    return;
+  }
+
+  // Format date for Google Calendar (YYYYMMDD)
+  const formattedDate = selectedDate.replace(/-/g, '');
+  
+  const title = encodeURIComponent("Saree Service - Rasya Traditions");
+  const details = encodeURIComponent("Professional saree ironing/pleating appointment.");
+  
+  // Create Google Calendar Link
+  const gCalUrl = `https://www.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${formattedDate}/${formattedDate}&details=${details}&sf=true&output=xml`;
+  
+  window.open(gCalUrl, '_blank');
+});
+
+// WhatsApp Booking Function
+function bookAppointment() {
+  const dateValue = document.getElementById('appointment-date').value;
+  if(!dateValue) {
+    alert("Please select a date on the ticket first!");
+    return;
+  }
+  
+  const message = `Hi Rasya Traditions! I would like to book a Saree Service appointment for ${dateValue}. Please confirm my slot.`;
+  const whatsappUrl = `https://wa.me/917975722193?text=${encodeURIComponent(message)}`;
+  
+  window.open(whatsappUrl, '_blank');
+}
+
+
+
 // Preloader Logic
 window.addEventListener('load', () => {
   const loader = document.getElementById('preloader');
@@ -62,3 +131,4 @@ window.addEventListener('load', () => {
     loader.classList.add('fade-out');
   }, 1000); 
 });
+

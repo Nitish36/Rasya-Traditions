@@ -856,3 +856,175 @@ form input, form textarea {
 .shine-card p strong {
   color: #d4af37;
 }
+
+/* BOOKING TICKET STYLING */
+.booking-ticket {
+  display: flex;
+  background: #f4f4f4;
+  border-radius: 20px;
+  overflow: hidden;
+  max-width: 900px;
+  margin: 0 auto;
+  color: #3a2e2a;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.booking-ticket:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+/* Left side - Date */
+.ticket-date {
+  background: #470008;
+  color: #d4af37;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 180px;
+  text-align: center;
+  position: relative;
+}
+
+.date-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0; /* Keeps it hidden but clickable */
+  cursor: pointer;
+  z-index: 10; /* Ensures it is ABOVE the display text */
+}
+
+/* Add this to ensure the display text doesn't block clicks */
+.date-display {
+  position: relative;
+  z-index: 1; 
+  pointer-events: none; /* This allows clicks to pass through the text to the input below */
+}
+
+.date-display #display-day {
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 1;
+  display: block;
+}
+
+/* Middle side - Body */
+.ticket-body {
+  flex: 2;
+  padding: 30px;
+  background: #fff;
+  position: relative;
+  border-right: 2px dashed #ccc;
+}
+
+/* Creating the "Cut-out" circles for the ticket look */
+.ticket-body::before, .ticket-body::after {
+  content: '';
+  position: absolute;
+  right: -11px;
+  width: 22px;
+  height: 22px;
+  background: #333; /* Matches section background color */
+  border-radius: 50%;
+}
+.ticket-body::before { top: -11px; }
+.ticket-body::after { bottom: -11px; }
+
+.ticket-info h3 {
+  margin-bottom: 20px;
+  color: #470008;
+}
+
+.info-row {
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+.barcode {
+  margin-top: 30px;
+  font-family: monospace;
+  font-size: 1.2rem;
+  letter-spacing: -2px;
+  opacity: 0.5;
+}
+
+/* Right side - Pricing */
+.ticket-price {
+  flex: 1.2;
+  background: #e2d6cc;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-price {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #470008;
+  margin: 10px 0;
+}
+
+.book-btn {
+  background: #470008;
+  color: #d4af37;
+  border: 1px solid #d4af37;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-transform: uppercase;
+  width: 100%;
+  cursor: pointer;
+  margin-top: 15px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.book-btn:hover {
+  background: #960213; /* Lighter maroon on hover */
+  color: #fff;
+  box-shadow: 0 5px 15px rgba(150, 2, 19, 0.4);
+}
+
+/* Style from your 2nd image */
+.add-cal-btn {
+  background: transparent;
+  border: 1px solid #470008;
+  color: #470008;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  width: 100%;
+  margin-top: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.add-cal-btn:hover {
+  background: white;
+  border-color: #470008;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .booking-ticket {
+    flex-direction: column;
+  }
+  .ticket-body {
+    border-right: none;
+    border-bottom: 2px dashed #ccc;
+  }
+  .ticket-body::before, .ticket-body::after {
+    left: -11px;
+    top: auto;
+    bottom: -11px;
+  }
+}
