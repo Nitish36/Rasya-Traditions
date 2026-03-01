@@ -485,7 +485,7 @@
             <strong>24 - 48 Hours</strong>
           </div>
           <!-- Stylized Barcode for the 'Ticket' look -->
-          <div class="barcode">|| ||| || |||| || ||| || ||||</div>
+          <div class="barcode">|||||||||||| |||| || ||| || ||||</div>
         </div>
       </div>
 
@@ -504,6 +504,21 @@
           </button>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- Upcoming Schedule Section -->
+<section id="upcoming-schedule" class="section">
+  <div class="container">
+    <h2 style="text-align: center; margin-bottom: 10px;">Availability Calendar</h2>
+    <p style="text-align: center; color: #d4af37; margin-bottom: 40px;">Live schedule for the next 14 days.</p>
+    
+    <div class="schedule-wrapper">
+      <button class="nav-btn prev-btn" onclick="moveSlide(-1)">&#10094;</button>
+      <!-- This will be filled by JavaScript -->
+      <div class="schedule-slider" id="schedule-slider"></div>
+      <button class="nav-btn next-btn" onclick="moveSlide(1)">&#10095;</button>
     </div>
   </div>
 </section>

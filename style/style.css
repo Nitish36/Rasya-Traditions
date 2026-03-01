@@ -949,7 +949,7 @@ form input, form textarea {
   font-family: monospace;
   font-size: 1.2rem;
   letter-spacing: -2px;
-  opacity: 0.5;
+  opacity: 0.8;
 }
 
 /* Right side - Pricing */
@@ -1027,4 +1027,90 @@ form input, form textarea {
     top: auto;
     bottom: -11px;
   }
+}
+
+/* SCHEDULE SLIDER STYLING */
+.schedule-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.schedule-slider {
+  display: flex;
+  gap: 20px;
+  overflow-x: hidden; /* We will move this with JS */
+  scroll-behavior: smooth;
+  padding: 20px 0;
+}
+
+.schedule-card {
+  min-width: 160px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 12px;
+  padding: 25px 15px;
+  text-align: center;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.card-date {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1;
+}
+
+.card-month {
+  font-size: 0.8rem;
+  color: #d4af37;
+  letter-spacing: 1px;
+  margin-top: 5px;
+  text-transform: uppercase;
+}
+
+.status-label {
+  display: block;
+  margin-top: 15px;
+  font-size: 0.65rem;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+/* Status Colors */
+.booked { opacity: 0.6; }
+.booked .status-label { background: #960213; color: #fff; }
+
+.available .status-label { background: #25d366; color: #fff; }
+
+.event .status-label { background: #d4af37; color: #470008; }
+
+/* Navigation Buttons */
+.nav-btn {
+  background: #d4af37;
+  color: #470008;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  font-size: 1.2rem;
+  transition: 0.3s;
+}
+
+.nav-btn:hover {
+  background: #fff;
+  transform: scale(1.1);
+}
+
+.prev-btn { margin-right: 15px; width: 10%;}
+.next-btn { margin-left: 15px; width: 10%;}
+
+@media (max-width: 768px) {
+  .schedule-card { min-width: 140px; }
 }

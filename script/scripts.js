@@ -132,6 +132,63 @@ function bookAppointment() {
   window.open(whatsappUrl, '_blank');
 }
 
+// --- DYNAMIC SCHEDULE LOGIC ---
+
+// 1. YOUR FRIEND UPDATES THIS LIST ONLY (YYYY-MM-DD format)
+const busyDates = [
+  '2026-03-04', 
+  '2026-03-07', 
+  '2026-03-08',
+  '2026-03-12'
+];
+
+function generateSchedule() {
+  const slider = document.getElementById('schedule-slider');
+  const today = new Date();
+  
+  for (let i = 0; i < 14; i++) {
+      const currentDate = new Date();
+      currentDate.setDate(today.getDate() + i);
+      
+      // Format for checking against busyDates (YYYY-MM-DD)
+      const dateString = currentDate.toISOString().split('T')[0];
+      
+      // Format for display
+      const day = currentDate.getDate();
+      const monthYear = currentDate.toLocaleString('default', { month: 'short', year: 'numeric' }).toUpperCase();
+      
+      // Check if date is busy
+      const isBooked = busyDates.includes(dateString);
+      const statusClass = isBooked ? 'booked' : 'available';
+      const statusText = isBooked ? 'FULLY BOOKED' : 'SLOTS OPEN';
+
+      // Create the card
+      const card = document.createElement('div');
+      card.className = `schedule-card ${statusClass}`;
+      card.innerHTML = `
+          <div class="card-date">${day < 10 ? '0' + day : day}</div>
+          <div class="card-month">${monthYear}</div>
+          <span class="status-label">${statusText}</span>
+      `;
+      
+      slider.appendChild(card);
+  }
+}
+
+// Initialize the schedule on page load
+generateSchedule();
+
+// Keep your moveSlide function below this
+let currentScroll = 0;
+function moveSlide(direction) {
+  const slider = document.getElementById('schedule-slider');
+  const cardWidth = 180; 
+  const maxScroll = slider.scrollWidth - slider.clientWidth;
+  currentScroll += (direction * cardWidth);
+  if (currentScroll < 0) currentScroll = 0;
+  if (currentScroll > maxScroll) currentScroll = maxScroll;
+  slider.scrollTo({ left: currentScroll, behavior: 'smooth' });
+}
 
 
 // Preloader Logic
