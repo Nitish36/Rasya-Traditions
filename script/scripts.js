@@ -127,7 +127,7 @@ function bookAppointment() {
   }
   
   const message = `Hi Rasya Traditions! I would like to book a Saree Service appointment for ${dateValue}. Please confirm my slot.`;
-  const whatsappUrl = `https://wa.me/917975722193?text=${encodeURIComponent(message)}`;
+  const whatsappUrl = `https://wa.me/919741366689?text=${encodeURIComponent(message)}`;
   
   window.open(whatsappUrl, '_blank');
 }
@@ -200,4 +200,5 @@ window.addEventListener('load', () => {
     loader.classList.add('fade-out');
   }, 1000); 
 });
+
 
