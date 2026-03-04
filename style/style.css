@@ -1114,3 +1114,74 @@ form input, form textarea {
 @media (max-width: 768px) {
   .schedule-card { min-width: 140px; }
 }
+
+/* SNACKBAR STYLING */
+#snackbar {
+  visibility: hidden;
+  min-width: 300px;
+  background-color: #470008;
+  color: #d4af37;
+  text-align: center;
+  border-radius: 12px;
+  border: 1px solid #d4af37;
+  padding: 16px;
+  position: fixed;
+  z-index: 10000;
+  left: 50%;
+  
+  /* --- CHANGE THIS VALUE --- */
+  top: 30px; 
+  /* ------------------------- */
+  
+  transform: translateX(-50%);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+/* The Shine Effect Animation */
+.snackbar-shine {
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(212, 175, 55, 0.4),
+    transparent
+  );
+  animation: snack-shine 3s infinite;
+}
+
+@keyframes snack-shine {
+  0% { left: -150%; }
+  30% { left: 150%; }
+  100% { left: 150%; }
+}
+
+#snackbar.show {
+  visibility: visible;
+  /* Updated animations to use Top */
+  animation: fadeinTop 0.5s, fadeoutTop 0.5s 2.5s;
+}
+
+.snackbar-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* Animations */
+@keyframes fadein {
+  from { bottom: 0; opacity: 0; }
+  to { bottom: 30px; opacity: 1; }
+}
+
+@keyframes fadeout {
+  from { bottom: 30px; opacity: 1; }
+  to { bottom: 0; opacity: 0; }
+}

@@ -91,7 +91,8 @@ addCalBtn.addEventListener('click', () => {
   const selectedDate = document.getElementById('appointment-date').value;
   
   if (!selectedDate) {
-    alert("Please select a date on the ticket first!");
+    // REPLACED alert WITH showSnackbar
+    showSnackbar("Please select a date on the ticket first! ✨");
     return;
   }
 
@@ -99,34 +100,54 @@ addCalBtn.addEventListener('click', () => {
   const dateObj = new Date(selectedDate);
   const formattedDate = selectedDate.replace(/-/g, '');
   
-  // 2. Set the end date (Google needs an end date, usually +1 day for all-day events)
+  // 2. Set the end date (+1 day)
   const tomorrow = new Date(dateObj);
   tomorrow.setDate(tomorrow.getDate() + 1);
   const formattedEndDate = tomorrow.toISOString().split('T')[0].replace(/-/g, '');
 
   // 3. Define the Details
   const title = encodeURIComponent("Saree Service Appointment - Rasya Traditions");
-  const details = encodeURIComponent("Thank you for booking with Rasya Traditions! This is a reminder for your saree service appointment.");
+  const details = encodeURIComponent("Reminder for your saree service appointment. Looking forward to seeing you!");
   const location = encodeURIComponent("Rasya Traditions Studio");
-  
-  // 4. ADD YOUR FRIEND'S EMAIL HERE
-  const guestEmail = "thanujakedila@gmail.com"; // <-- CHANGE THIS TO HER EMAIL
+  const guestEmail = "thanujakedila@gmail.com"; // <-- Ensure her email is here
 
-  // 5. Create the Google Calendar Link with 'add' parameter
+  // 4. Create the URL
   const gCalUrl = `https://www.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${formattedDate}/${formattedEndDate}&details=${details}&location=${location}&add=${guestEmail}&sf=true&output=xml`;
   
   window.open(gCalUrl, '_blank');
 });
 
+// Helper function to trigger snackbar
+function showSnackbar(message) {
+  const snack = document.getElementById("snackbar");
+  const msgElement = document.getElementById("snackbar-msg");
+  
+  msgElement.innerText = message;
+  snack.className = "show";
+  
+  // Remove the show class after 3 seconds
+  setTimeout(() => { 
+    snack.className = snack.className.replace("show", ""); 
+  }, 3000);
+}
+
 // WhatsApp Booking Function
 function bookAppointment() {
   const dateValue = document.getElementById('appointment-date').value;
+  
   if(!dateValue) {
-    alert("Please select a date on the ticket first!");
+    // REPLACED ALERT WITH SNACKBAR
+    showSnackbar("Please select a date on the ticket first! ✨");
     return;
   }
   
-  const message = `Hi Rasya Traditions! I would like to book a Saree Service appointment for ${dateValue}. Please confirm my slot.`;
+  // Formatting for WhatsApp
+  const dateObj = new Date(dateValue);
+  const formattedDate = dateObj.toLocaleDateString('en-GB', {
+    day: '2-digit', month: 'short', year: 'numeric'
+  });
+
+  const message = `Hi Rasya Traditions! I would like to book a Saree Service appointment for ${formattedDate}. Please confirm my slot.`;
   const whatsappUrl = `https://wa.me/919741366689?text=${encodeURIComponent(message)}`;
   
   window.open(whatsappUrl, '_blank');
